@@ -1,0 +1,74 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Click below to browse a category and add food to your order",
+            "weight": "Bolder",
+            "spacing": "None"
+        },
+        {
+            "type": "TextBlock",
+            "text": "What type of food do you prefer?",
+            "wrap": true
+        },
+        {
+            "type": "ImageSet",
+            "imageSize": "medium",
+            "images": [
+                {
+                    "type": "Image",
+                    "url": "https://www.foodofy.com/wp-content/uploads/2015/07/11015_14_site_clear.jpeg",
+                    "size": "Medium"
+                },
+                {
+                    "type": "Image",
+                    "url": "https://www.foodofy.com/wp-content/uploads/2015/07/11014_14_site_clear.jpeg",
+                    "size": "Medium"
+                },
+                {
+                    "type": "Image",
+                    "url": "https://img.jakpost.net/c/2016/09/29/2016_09_29_12990_1475116504._large.jpg",
+                    "size": "Medium"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "North Indian",
+            "card": {
+                "type": "AdaptiveCard",
+                "data": {
+                    "category":"North Indian"
+                },
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            }
+        },
+        {
+            "type": "Action.Submit",
+            "title": "South Indian",
+            "card": {
+                "type": "AdaptiveCard",
+                "data": {
+                    "category":"South Indian"
+                },
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            }
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Fast Food",
+            "card": {
+                "type": "AdaptiveCard",
+                "data": {
+                    "category":"Fast Food"
+                },
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            }
+        }
+    ]
+}
