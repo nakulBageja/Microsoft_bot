@@ -1,0 +1,47 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Selected Items",
+            "size": "Large",
+            "weight": "bolder",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "FactSet",
+            "facts": [
+                {
+                    "title": "1",
+                    "value": "Value 1"
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "Please enter quantity of each item",
+            "color": "Dark"
+        },
+        {
+            "type": "Input.Number",
+            "placeholder": "Quantity of ",
+            "min": 0,
+            "id": " "
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Submit",
+                    "data": {
+                        "Quantity": "Submit"
+                    }
+                }
+            ]
+        }
+    ],
+    "verticalContentAlignment": "Center"
+}

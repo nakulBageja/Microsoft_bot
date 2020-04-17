@@ -20,7 +20,7 @@ class bot extends ActivityHandler {
         this.dialog = dialog;
         this.dialogstate = this.conversationState.createProperty('DialogState')
     
-        const WELCOME_TEXT = 'Type anything to see an fill your profile.';
+        const WELCOME_TEXT = 'Type anything to progress.';
         this.onMembersAdded(async (context, next) => {
             const membersAdded = context.activity.membersAdded;
             for (let cnt = 0; cnt < membersAdded.length; cnt++) {
@@ -33,8 +33,6 @@ class bot extends ActivityHandler {
             await next();
         });
         this.onMessage(async (context, next) =>{
-
-            console.log("Running bot.js")
             await this.dialog.run(context, this.dialogstate)
             await next()
         })

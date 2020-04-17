@@ -5,9 +5,9 @@
     "body": [
         {
             "type": "TextBlock",
-            "text": "Click below to browse a category and add food to your order",
-            "weight": "Bolder",
-            "spacing": "None"
+            "text": "Celebal Food Delivery",
+            "size": "Large",
+            "weight": "bolder"
         },
         {
             "type": "TextBlock",
@@ -20,54 +20,161 @@
             "images": [
                 {
                     "type": "Image",
-                    "url": "https://www.foodofy.com/wp-content/uploads/2015/07/11015_14_site_clear.jpeg",
-                    "size": "Medium"
+                    "url": "https://www.foodofy.com/wp-content/uploads/2015/07/11015_14_site_clear.jpeg"
                 },
                 {
                     "type": "Image",
-                    "url": "https://www.foodofy.com/wp-content/uploads/2015/07/11014_14_site_clear.jpeg",
-                    "size": "Medium"
+                    "url": "https://www.foodofy.com/wp-content/uploads/2015/07/11014_14_site_clear.jpeg"
                 },
                 {
                     "type": "Image",
-                    "url": "https://img.jakpost.net/c/2016/09/29/2016_09_29_12990_1475116504._large.jpg",
-                    "size": "Medium"
+                    "url": "https://img.jakpost.net/c/2016/09/29/2016_09_29_12990_1475116504._large.jpg"
                 }
             ]
         }
     ],
     "actions": [
         {
-            "type": "Action.Submit",
+            "type": "Action.ShowCard",
             "title": "North Indian",
             "card": {
                 "type": "AdaptiveCard",
-                "data": {
-                    "category":"North Indian"
-                },
-                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": "We have the following dishes in North Indian category",
+                        "size": "medium",
+                        "wrap": true
+                    },
+                    {
+                        "type": "Input.ChoiceSet",
+                        "id": "N_food",
+                        "style": "expanded",
+                        "isMultiSelect": true,
+                        "choices": [
+                            {
+                                "title": "Chicken 200/-",
+                                "value": "Chicken"
+                            },
+                            {
+                                "title": "Paneer 150/-",
+                                "value": "Paneer"
+                            },
+                            {
+                                "title":"Chole Bhature 130/-",
+                                "value":"Chole Bhature"
+                            },
+                            {
+                                "title":"Kadhi Chawal 110/-",
+                                "value":"Kadhi Chawal"
+                            }
+                            
+                        ]
+                    }                   
+                ],
+                "actions": [
+                    {
+                        "type": "Action.Submit",
+                        "title": "OK",
+                        "data": {
+                            "FoodChoice": "NorthIndian"
+                        }
+                    }
+                ]
             }
         },
         {
-            "type": "Action.Submit",
+            "type": "Action.ShowCard",
             "title": "South Indian",
             "card": {
                 "type": "AdaptiveCard",
-                "data": {
-                    "category":"South Indian"
-                },
-                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": "We have the following dishes in South Indian category",
+                        "size": "medium",
+                        "wrap": true
+                    },
+                    {
+                        "type": "Input.ChoiceSet",
+                        "id": "S_food",
+                        "style": "expanded",
+                        "isMultiSelect": true,
+                        "choices": [
+                            {
+                                "title": "Idli vada 60/-",
+                                "value": "Idli vada"
+                            },
+                            {
+                                "title": "Masala Dosa 80/-",
+                                "value": "Masala Dosa"
+                            },
+                            {
+                                "title": "Utapam 60/-",
+                                "value": "Utapam"
+                            }
+                        ]
+                    }
+                ],
+                "actions": [
+                    {
+                        "type": "Action.Submit",
+                        "title": "OK",
+                        "data": {
+                            "FoodChoice": "SouthIndian"
+                        }
+                    }
+                ]
             }
         },
         {
-            "type": "Action.Submit",
+            "type": "Action.ShowCard",
             "title": "Fast Food",
             "card": {
                 "type": "AdaptiveCard",
-                "data": {
-                    "category":"Fast Food"
-                },
-                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": "We have the following dishes in Fast Food category",
+                        "size": "medium",
+                        "wrap": true
+                    },
+                    {
+                        "type": "Input.ChoiceSet",
+                        "id": "F_food",
+                        "title": "Please prepare it vegan",
+                        "isMultiSelect": true,
+                        "choices": [
+                            {
+                                "title":"Burger 110/-",
+                                "value":"Burger"
+                            },
+                            {
+                                "title":"Pizza 220/-",
+                                "value":"Pizza"
+                            },
+                            {
+                                "title":"Pasta 150/-",
+                                "value":"Pasta"
+                            },
+                            {
+                                "title":"KFC chicken 250/-",
+                                "value":"KFC chicken"
+                            }
+                        ]
+                        
+                    }
+                   
+                ],
+                "actions": [
+                    {
+                        "type": "Action.Submit",
+                        "title": "OK",
+                        "data": {
+                            "FoodChoice": "FastFood"
+                        }
+                    }
+                ]
             }
         }
     ]

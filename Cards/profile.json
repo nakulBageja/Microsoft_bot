@@ -3,9 +3,10 @@
     "body": [
         {
             "type": "TextBlock",
-            "size":"Medium",
-            "weight":"Bolder",
-            "text": "Profile"
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Profile",
+            "horizontalAlignment": "Center"
         },
         {
             "type": "ColumnSet",
@@ -16,7 +17,7 @@
                         {
                             "type": "TextBlock",
                             "weight": "Bolder",
-                            "text": "",
+                            "text": "{creator.name}",
                             "wrap": true
                         }
                     ],
@@ -28,24 +29,16 @@
             "type": "FactSet",
             "facts": [
                 {
-                    "title": "Age",
-                    "value": ""
-                },
-                {
-                    "title": "Gender",
-                    "value": ""
-                },
-                {
-                    "title": "Number",
-                    "value": ""
-                },
-                {
                     "title": "Email",
                     "value": ""
                 },
                 {
+                    "title": "Phone Number",
+                    "value": ""
+                },
+                {
                     "title": "Address",
-                    "value":""
+                    "value": ""
                 }
             ]
         }

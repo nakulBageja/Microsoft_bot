@@ -1,0 +1,116 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 2,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Profile",
+                            "weight": "Bolder",
+                            "size": "Medium",
+                            "horizontalAlignment": "Center"
+                        },
+                        {
+                            "type": "FactSet",
+                            "facts": [
+                                {
+                                    "title": "Name:",
+                                    "value": "Value 1"
+                                },
+                                {
+                                    "title": "Phone number",
+                                    "value": "a"
+                                },
+                                {
+                                    "title": "Email",
+                                    "value": "s"
+                                },
+                                {
+                                    "title": "Address",
+                                    "value": "d"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Year of passing",
+                            "horizontalAlignment": "Center",
+                            "weight": "Bolder",
+                            "size": "Medium"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "10th Class:"
+                        },
+                        {
+                            "type": "Input.Text",
+                            "id": "class_10",
+                            "placeholder": "2017;2019"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "12th Class:",
+                            "wrap": true
+                        },
+                        {
+                            "type": "Input.Text",
+                            "id": "class_12",
+                            "placeholder": "2017;2019"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Graduation:"
+                        },
+                        {
+                            "type": "Input.Text",
+                            "id": "grad",
+                            "placeholder": "2017;2019",
+                            "style": "Tel"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "WORK",
+                            "horizontalAlignment": "Center",
+                            "size": "Medium",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Field of interest"
+                        },
+                        {
+                            "type": "Input.Text",
+                            "id": "interest",
+                            "placeholder": "UI/UX; Php Developer; Android Developer"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Work Experience"
+                        },
+                        {
+                            "type": "Input.Number",
+                            "placeholder": "0",
+                            "id": "w_exp"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Submit",
+            "data": {
+                "JOB": "Submit"
+            }
+        }
+    ]
+}

@@ -2,8 +2,6 @@ const server = require('./server')
 const { BotFrameworkAdapter, MemoryStorage, ConversationState, UserState } = require('botbuilder')
 const path = require('path')
 const dotenv = require('dotenv')
-const {bookdialog} = require('./dialogs/booking_dialog')
-const BOOK_DIALOG = 'bookdialog'
 
 const memoryStorage = new MemoryStorage();
 const conversationState = new ConversationState(memoryStorage);
@@ -12,8 +10,7 @@ const userState = new UserState(memoryStorage);
 const { bot } = require('./bots/Bot');
 const { UserProfileDialog } = require('./dialogs/user_details');
 
-const book = new bookdialog(BOOK_DIALOG)
-const dialog = new UserProfileDialog(userState,book)
+const dialog = new UserProfileDialog(userState)
 const Bot = new bot(conversationState, userState, dialog)
 
 //importing required bot info

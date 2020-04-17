@@ -1,0 +1,38 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Create Schedule",
+            "size": "large",
+            "weight": "bolder"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Name",
+            "size": "small"
+        },
+        {
+            "type": "Input.Text",
+            "id": "name"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Save",
+            "data": {
+                "result": "save"
+            }
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Cancel",
+            "data": {
+                "result": "cancel"
+            }
+        }
+    ] 
+}
