@@ -17,6 +17,11 @@ npm install
 ```
 You need to install the Bot Framework Emulator 
 Use this site to download emulator for your respective OS https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.8.1
+Configure you bot to the emulator and run the below command:
+
+```bash
+npm start
+```
 
 Type Hi to start your Bot
 
